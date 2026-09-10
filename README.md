@@ -4,15 +4,21 @@ A read-only fantasy football companion for your Sleeper leagues. Follow matchups
 
 ## Download
 
-**Current candidate: [Gameday 0.1 RC2 — build 6](https://github.com/reidmojo/gameday-releases/releases/tag/v0.1.0-rc.2).**
+**Current candidate: [Gameday 0.1 RC3 — build 7](https://github.com/reidmojo/gameday-releases/releases/tag/v0.1.0-rc.3).**
 
-- [Download Gameday-0.1-build-6.ipa](https://github.com/reidmojo/gameday-releases/releases/download/v0.1.0-rc.2/Gameday-0.1-build-6.ipa)
-- [Release notes](RELEASE_NOTES_0.1.0-rc.2.md)
+- [Download Gameday-0.1-build-7.ipa](https://github.com/reidmojo/gameday-releases/releases/download/v0.1.0-rc.3/Gameday-0.1-build-7.ipa)
+- [Release notes](RELEASE_NOTES_0.1.0-rc.3.md)
 - [All releases, including older builds](https://github.com/reidmojo/gameday-releases/releases)
 
 Requires an iPhone running **iOS 17 or later**, a Mac or Windows PC, a USB cable for initial pairing, your own Apple account, and your Sleeper username. No GitHub account, source checkout, Xcode, developer membership, or paid hosting is required. The IPA is unsigned; your installer signs it for your phone.
 
-**Installation testing is currently blocked:** build 6 passed automated checks and was installed and opened using the maintainer's development signing setup, but both Sideloadly and AltServer have failed during Apple authentication on the test Mac. No free-account installation, signing refresh, or installer update has passed yet. The instructions below are reference steps, not a verified onboarding path. Hold off on inviting the whole league until installation testing succeeds.
+**Installation testing is still in progress:** build 7 has been built and visually checked in Release Simulator. Earlier build 6 was installed using the maintainer's development signing setup. Both Sideloadly and AltServer failed during Apple authentication on the test Mac; free-account IPA installation, signing refresh, and installer updates remain unverified. The IPA instructions below are reference steps. Invited engineers can build from the private source using Xcode; their installation and cellular checks are still pending.
+
+## Invited engineer: build from source
+
+If the maintainer has given you access to the private [app repository](https://github.com/reidmojo/fantasy-gameday), clone `main` and follow its [Xcode installation steps](https://github.com/reidmojo/fantasy-gameday/blob/main/ios/README.md#install-from-source-with-the-shared-backend). You need a Mac, Xcode 26.6, and your own Apple account; a paid membership is not required for personal-device testing. Embed `https://gameday-api.onrender.com` as the API URL and leave the season override blank. No backend runs on your computer.
+
+Free Xcode signing still expires after seven days. Keep your own team and bundle identifier consistent when rebuilding to renew or update. [Apple's Personal Team limits](https://developer.apple.com/support/compare-memberships/). Source access is by invitation; this public repository continues to contain downloads and instructions only.
 
 ## Install on your iPhone
 
@@ -28,7 +34,7 @@ The official Mac download checked on September 10 still identified itself as 1.7
 2. Connect and unlock your iPhone over USB. Complete the computer/phone Trust prompts. Enable Wi-Fi device syncing in Finder on Mac or iTunes on Windows so later refreshes can work wirelessly.
 3. Open AltServer's menu, choose **Install AltStore**, and select your iPhone. Enter your own Apple account in AltServer and complete its authentication prompts yourself.
 4. On iPhone, follow the developer trust prompt under **Settings → General → VPN & Device Management**. Enable **Developer Mode** under **Settings → Privacy & Security** if iOS requests it, including its restart/confirmation. Open AltStore Classic.
-5. Download the build 6 IPA from the link above in Safari on your iPhone and save it in Files. In AltStore, open **My Apps → +**, select that IPA, and complete any sign-in prompts. Keep AltServer running and your phone connected during installation.
+5. Download the build 7 IPA from the link above in Safari on your iPhone and save it in Files. In AltStore, open **My Apps → +**, select that IPA, and complete any sign-in prompts. Keep AltServer running and your phone connected during installation.
 6. Open **Gameday** from your Home Screen, enter your Sleeper username, and select a league. No Sleeper password is needed.
 
 Downloading an IPA alone does not install it. AltStore handles the signing/import step. Do not send Apple passwords or verification codes to the maintainer or league chat.
@@ -55,9 +61,9 @@ The computer supports signing and refresh. Once installed, Gameday gets scores d
 
 ## Install updates
 
-Download the next IPA from this repository and import it through the same installer and Apple account. Install over the existing copy; do not delete it first. Check **… → About and help** in Gameday for the version/build. Build 6 is version **0.1 (6)**.
+Download the next IPA from this repository and import it through the same installer and Apple account. Install over the existing copy; do not delete it first. Check **… → About and help** in Gameday for the version/build. Build 7 is version **0.1 (7)**.
 
-Some wording in build 6's Help sheet still names Sideloadly. Its installation link opens this current guide, which also covers the AltStore path.
+Some wording in build 7's Help sheet still names Sideloadly. Its installation link opens this current guide, which also covers the AltStore path.
 
 ## First beta session
 
