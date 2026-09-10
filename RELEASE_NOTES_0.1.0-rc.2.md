@@ -14,7 +14,7 @@ The current installation candidate for the first leaguemate beta. Requires iOS 1
 
 ## Download and install
 
-Download **Gameday-0.1-build-6.ipa** below, then follow the [current installation guide](https://github.com/reidmojo/gameday-releases#install-on-your-iphone). We are verifying AltStore Classic with AltServer after the documented Sideloadly authentication failure. Keep your existing app installed during the transition. The IPA is unsigned and contains no development provisioning profile or certificate.
+Download **Gameday-0.1-build-6.ipa** below and read the [current installation guide](https://github.com/reidmojo/gameday-releases#install-on-your-iphone), including the unresolved installer errors. Both Sideloadly and AltServer have failed during Apple authentication on the test Mac; there is no verified free-account onboarding path yet. Keep your existing app installed during the transition. The IPA is unsigned and contains no development provisioning profile or certificate.
 
 Free signing lasts seven days and needs periodic refresh through your computer. Gameday itself works over Wi-Fi or cellular using the shared free service. A first connection after inactivity may take about a minute.
 
@@ -22,7 +22,7 @@ Free signing lasts seven days and needs periodic refresh through your computer. 
 
 Passed: 76 server tests and type-check/build on the feature backend, 51 iOS tests on build 6, packaging checks, Release Simulator visual checks, and development-signed installation/opening on the maintainer's iPhone. Hosted checks covered both leagues and the full Weeks 1/2 schedules, score consistency, custom DST totals/projections, analytics, and drive play-by-play. A separate gesture check on the Games feature passed. Existing capacity testing covered 24 simulated clients without throttling or failures.
 
-**Still pending:** free-account installer installation and Home Screen reopening, signing refresh, an update through that installer, another tester using their own username over cellular, and a genuine uninterrupted idle-start check. AltStore has not yet been confirmed working for this candidate. Sideloadly 0.60 failed at Obtaining team ID before signing/installing. This is a prerelease for installation testing; it has not been promoted to stable v0.1.
+**Still pending:** free-account installer installation and Home Screen reopening, signing refresh, an update through that installer, another tester using their own username over cellular, and a genuine uninterrupted idle-start check. Sideloadly 0.60 failed at Obtaining team ID before signing/installing. AltServer 1.7.2 (build 90) subsequently failed installing AltStore with “Encountered unknown tag html on line 1” / `NSCocoaErrorDomain 3840`, before Gameday was imported. A [related upstream authentication fix](https://github.com/rileytestut/AltSign/pull/52) was merged September 8, 2026; successful installation with an official fixed build remains unverified here. This is a prerelease for installation testing; it has not been promoted to stable v0.1.
 
 ## Build details
 
