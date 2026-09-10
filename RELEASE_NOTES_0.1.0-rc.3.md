@@ -20,7 +20,7 @@ Keep any existing Gameday installation. Use the same signing team and bundle ide
 
 ## Candidate status
 
-Release Simulator build and visual checks passed for both real league cards. Opening a league and returning to the selector passed. Existing server, iOS, and packaging configuration suites run on the exact source revision before promotion to main. Prior backend validation remains applicable because no service changes are included.
+Release Simulator build and visual checks passed for both real league cards. Opening a league and returning to the selector passed. GitHub PR validation passed on the exact source revision: 76 server tests with type-check/build, 51 iOS tests, and three packaging configuration tests. The checked update is now merged into main. Prior backend validation remains applicable because no service changes are included.
 
 **Still pending:** free-account installation and Home Screen reopening on another tester's phone, that tester's own Sleeper username over cellular, signing renewal and an in-place update, and a genuine uninterrupted idle-start check. This remains a prerelease; it is not stable v0.1.
 
