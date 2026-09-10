@@ -16,6 +16,8 @@ Automated server and iOS checks passed. A 24-client, two-league load simulation 
 
 **Installation testing is still pending:** actual free-account Sideloadly installation, reopening from the Home Screen, signing refresh, an in-place update, and another tester using their own username over cellular. This is a prerelease for those checks, not the final v0.1 approval.
 
+A Mac installation attempt currently fails in Sideloadly 0.60 at **Obtaining team ID** with `Guru Meditation f65043@1006:23a71c Invalid file`. This occurs before app signing/installing; a successful Sideloadly installation is still required. The optional AltServer fallback is unverified. See the guide's current installation issue section before testing.
+
 ## Build details
 
 - Version 0.1, build 3; arm64; minimum iOS 17.

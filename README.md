@@ -18,6 +18,12 @@ Requires an iPhone running iOS 17 or later and a Mac or Windows PC. You do not n
 6. If iOS asks for Developer Mode, enable it under **Settings → Privacy & Security → Developer Mode**, restart, and confirm. If you see **Untrusted Developer**, cancel the alert, then go to **Settings → General → VPN & Device Management**, select your developer account, and trust it. Only trust the account you just used to sign this build.
 7. Open **Gameday** from your Home Screen. Enter your Sleeper username and choose your league. No Sleeper password is requested.
 
+## Current candidate installation issue
+
+During Mac testing, Sideloadly 0.60 reported `Guru Meditation f65043@1006:23a71c Invalid file` immediately after **Obtaining team ID**, before app signing or installation. The same attempt failed with the phone in Airplane Mode. The IPA passes archive and build validation, but a successful physical installation has not yet been observed. Do not repeatedly change your Apple password or delete Gameday in response to this error.
+
+An optional free fallback is [AltServer's direct IPA installation](https://faq.altstore.io/release-notes/altserver): Option-click its Mac menu-bar icon (Shift-click on Windows), choose **Sideload .ipa…**, select your phone and the same Gameday IPA, then complete Apple sign-in inside AltServer. This fallback is also **unverified for this candidate**. Direct AltServer installs need manual reinstallation every seven days; AltStore is needed for its automatic refresh workflow. Use the same signing account and app identifier for updates.
+
 ## Keep it working
 
 Free signing expires after **seven days**. Sideloadly's refresh daemon can re-sign the app before then while your computer is available and your phone is connected by USB or paired for Wi-Fi access on the same network. Enable Wi-Fi device syncing in Finder on Mac, or follow Sideloadly's Windows instructions. Let your phone reconnect to that computer regularly; refresh is not guaranteed if the computer is asleep, offline, or unreachable.
